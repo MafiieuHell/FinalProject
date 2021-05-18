@@ -9,22 +9,16 @@
     </head>
     <body>
         <header>
-<<<<<<< HEAD
             <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-=======
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
->>>>>>> 2f0204c532da7ee68df451ca110dab49887a7b86
                 <a class="navbar-brand" href="{{ route('home') }}">Blog</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-<<<<<<< HEAD
                 
                
             </nav>
         </header>
-        
-=======
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
@@ -69,8 +63,6 @@
                 </div>
             </nav>
         </header>
-
->>>>>>> 2f0204c532da7ee68df451ca110dab49887a7b86
         <main class="container my-3">
             @yield('content')
         </main>
