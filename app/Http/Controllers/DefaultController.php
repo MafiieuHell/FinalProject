@@ -3,13 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-<<<<<<< HEAD
-
-class DefaultController extends Controller
-{
-    //
-=======
 use App\Models\Post;
+
 
 class DefaultController extends Controller
 {
@@ -22,5 +17,5 @@ class DefaultController extends Controller
             'posts' => $posts    
         ]);
     }
->>>>>>> 2f0204c532da7ee68df451ca110dab49887a7b86
+
 }
