@@ -13,8 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+<<<<<<< HEAD
 
 Route::get('/', [App\Http\Controllers\DefaultController::class, 'home'])->name('home');
 Route::get('/users/register', [App\Http\Controllers\UserController::class, 'register'])->name('register');
 
 
+=======
+Route::get('/', [App\Http\Controllers\DefaultController::class, 'home'])->name('home');
+Route::get('/posts',[App\Controllers\PostController::class,'index'])->name('index');
+>>>>>>> 2f0204c532da7ee68df451ca110dab49887a7b86
