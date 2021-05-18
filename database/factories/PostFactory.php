@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Post;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 class PostFactory extends Factory
 {
@@ -21,8 +22,11 @@ class PostFactory extends Factory
      */
     public function definition()
     {
+        $title = $this->faker->words(3,true);
+        $slug = Str::slug($title,'-');
         return [
-            'title' => $this->faker->words(3,true),
+            'title' => $title,
+            'slug' => $slug,
             'content' => $this->faker->paragraph(5,true),
             'user_id' => 1
         ];
