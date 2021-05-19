@@ -15,10 +15,13 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/', [App\Http\Controllers\DefaultController::class, 'home'])->name('home');
+Route::get('/',[App\Http\Controllers\DefaultController::class, 'home'])->name('home');
 Route::get('/posts',[App\Http\Controllers\PostController::class,'index'])->name('posts.index');
 Route::get('/posts/{slug}',[App\Http\Controllers\PostController::class,'show'])->name('posts.show');
-Route::get('/users/register', [App\Http\Controllers\UserController::class, 'register'])->name('register');
-Route::get('/users/login', [App\Http\Controllers\UserController::class, 'login'])->name('login');
-Route::post('/users/signin', [App\Http\Controllers\UserController::class, 'signin'])->name('signin');
+Route::get('/users/register',[App\Http\Controllers\UserController::class, 'register'])->name('register');
+Route::post('/users', [App\Http\Controllers\UserController::class, 'signup'])->name('signup');
+Route::get('/users/login',[App\Http\Controllers\UserController::class, 'login'])->name('login');
+Route::post('/users/signin',[App\Http\Controllers\UserController::class, 'signin'])->name('signin');
+Route::get('/users/lougout',[App\Http\Controllers\UserController::class, 'logout'])->name('logout');
+
 

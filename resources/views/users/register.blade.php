@@ -5,7 +5,7 @@
 @section('content')
     <h1>Inscription</h1>
     
-    <form action="#" method="post">
+    <form action="{{ route('signup') }}" method="post">
         @csrf
         
         @if($errors->any())
@@ -30,8 +30,8 @@
             <input type="password" class="form-control" id="password" name="password" value="{{ old('password') }}">
         </div>
         <div class="form-group">
-            <label for="password confirmation">Confirmer le mot de passe</label>
-            <input type="password" class="form-control" id="password-confirmation" name="password-confirmation" value="{{ old('password_confirmation') }}">
+            <label for="password-confirmation">Confirmer le mot de passe</label>
+            <input type="password" class="form-control" id="password-confirmation" name="password_confirmation" value="{{ old('password_confirmation') }}">
         </div>
           <button class="btn btn-primary">Enregistrer</button>
     </form>

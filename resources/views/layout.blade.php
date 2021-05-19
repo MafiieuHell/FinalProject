@@ -9,16 +9,11 @@
     </head>
     <body>
         <header>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <a class="navbar-brand" href="{{ route('posts.index') }}">Debug moi</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                
-               
-            </nav>
-        </header>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
@@ -44,10 +39,10 @@
                             </li>
                         @else
                             <li class="nav-item">
-                                <a href="#" class="nav-link">Connexion</a>
+                                <a href="{{route('login')}}" class="nav-link">Connexion</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link">Inscription</a>
+                                <a href="{{route ('register')}}" class="nav-link">Inscription</a>
                             </li>
                         @endauth
                     </ul>
