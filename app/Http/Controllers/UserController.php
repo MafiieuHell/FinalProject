@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -29,11 +29,13 @@ class UserController extends Controller
         
         return redirect()->route('login');
     }
+    
     public function login()
     {
         return view('users.login');
     }
-      public function signin(Request $request)
+    
+    public function signin(Request $request)
     {
         $credentials = $request->only('email', 'password');
         
@@ -47,7 +49,8 @@ class UserController extends Controller
             'credentials' => 'Les identifiants ne correspondent pas'
         ]);
     }
-     public function logout(Request $request)
+    
+    public function logout(Request $request)
     {
         Auth::logout();
         $request->session()->invalidate();
