@@ -23,8 +23,6 @@ Route::get('/users/login',[App\Http\Controllers\UserController::class, 'login'])
 Route::post('/users/signin',[App\Http\Controllers\UserController::class, 'signin'])->name('signin');
 Route::get('/users/lougout',[App\Http\Controllers\UserController::class, 'logout'])->name('logout');
 Route::get('/users/register', [App\Http\Controllers\UserController::class, 'register'])->name('register');
-Route::get('/users/login', [App\Http\Controllers\UserController::class, 'login'])->name('login');
-Route::post('/users/signin', [App\Http\Controllers\UserController::class, 'signin'])->name('signin');
 Route::post('posts/{id}/responses', [App\Http\Controllers\ResponseController::class, 'store'])->name('posts.responses');
 Route::get('/posts/{slug}',[App\Http\Controllers\PostController::class,'show'])->name('posts.show');
 
