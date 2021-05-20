@@ -3,8 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <title>Laravel - @yield('title')</title>
+        <link rel="stylesheet" href="bootstrap.bundle.min.js / bootstrap.bundle.js"/>        
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
         <link rel="stylesheet" href="{{ secure_asset('css/app.css') }}">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous" defer></script>
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" defer></script>
         <script src="{{ secure_asset('js/main.js') }}" defer></script>
     </head>
     <body>
@@ -24,16 +28,18 @@
                             <a class="nav-link" href="#">Questions</a>
                         </li>
                         @auth
-                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Mon compte
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item" href="#">Profil</a>
-                          <a class="dropdown-item" href="#">Deconexion</a>
-                       
+                    <li class="nav-item">
+                        <div class="dropdown">
+                          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Mon compte
+                          </button>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Profile</a>
+                            <a class="dropdown-item" href="route{{'logout'}}">Deconexion</a>
+                      
+                          </div>
                         </div>
-                     </li>   
+                    </li>   
                             <li class="nav-item">
                                 <a href="#" class="nav-link">Utilisateurs</a>
                             </li>
