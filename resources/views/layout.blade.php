@@ -34,7 +34,7 @@
                             Mon compte
                           </button>
                           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Profile</a>
+                            <a class="dropdown-item" href="#">Profil</a>
                             <a class="dropdown-item" href="route{{'logout'}}">Deconexion</a>
                       
                           </div>
